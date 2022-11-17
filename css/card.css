@@ -4,16 +4,10 @@
   border: 2px solid gray;
   border-radius: 15px;
   cursor: pointer;
-  /* background: rgba(255, 255, 255, 90%); */
-  /* background-image: linear-gradient(
-    130deg,
-    rgb(234, 240, 246) 70%,
-    rgb(12, 59, 87) 95%
-  ); */
   background-image: linear-gradient(
     130deg,
-    rgb(234, 240, 246) 70%,
-    rgb(56, 117, 12) 100%
+    rgb(241, 244, 247) 70%,
+    rgb(57, 58, 59) 100%
   );
   position: relative;
   overflow: hidden;
@@ -25,7 +19,6 @@
 .card:hover .card__info {
   transform: translateY(17px);
   transition: 0.5s ease-in-out;
-  /* height: 230px; */
   border-radius: 0px;
 }
 
@@ -33,8 +26,12 @@
   opacity: 0;
 }
 
+.card:hover .card__subtitle__front {
+  opacity: 0;
+}
+
 .card:hover .card__front__img {
-  transform: translateY(-140px);
+  transform: translateY(-121px);
   width: 100%;
   height: 50%;
   border-radius: 0px;
@@ -43,7 +40,16 @@
 .card__text {
   font-size: 25px;
   color: #000;
-  /* text-shadow: 0 0 0.5rem #000; */
+  text-shadow: 0 0 0.5rem rgb(236, 249, 172);
+  transition: 0.3s all;
+}
+
+.card__icon {
+  width: 18px;
+  padding: 3px;
+  border-radius: 15px;
+  margin-right: 1rem;
+  background-color: #fff;
 }
 
 .card__front {
@@ -55,11 +61,8 @@
   flex-direction: column;
   border: 3px solid blue;
   border-radius: 15px;
-  /* background: rgba(255, 255, 255, 40%); */
-  gap: 2rem;
-  /* backface-visibility: hidden; */
+  gap: 1.5rem;
   position: absolute;
-  /* overflow: hidden; */
 }
 
 .card__info {
@@ -72,9 +75,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
   transform: translateY(250px);
-  /* transform: translateY(-150px); */
   transition: 0.5s ease-in-out;
 }
 
@@ -112,11 +114,21 @@
 .card__title {
   font-size: 18px;
   text-shadow: 0 0 0.5rem #000;
+  display: flex;
+  justify-content: center;
 }
 
 .card__subtitle {
   font-size: 14px;
   text-shadow: 0 0 0.3rem #000;
+}
+
+.card__subtitle__front {
+  font-size: 18px;
+  text-shadow: 0 0 0.5rem #fff;
+  display: flex;
+  justify-content: center;
+  transition: 0.3s all;
 }
 
 .card__title,

@@ -9,12 +9,12 @@ const renderCard = (item) => {
       <div class="card__front">
         <img src="${item.flags.png}" alt="" class="card__front__img" />
         <h1 class="card__text">${item.name.common}</h1>
+        <h2 class="card__subtitle__front">${item.continents}</h2>
       </div>  
       <div class="card__info">
         <img src="${item.flags.png}" alt="" class="card__img" />
-        <h1 class="card__title">${item.capital}</h1>
-        <p class="card__subtitle">${item.population}</p>
-        <p class="card__subtitle">${item.continents}</p>
+        <h1 class="card__title"><img class="card__icon" src="./img/location-crosshairs-solid.svg" alt="">${item.capital}</h1>
+        <p class="card__subtitle"><img class="card__icon" src="./img/people-group-solid.svg" alt="">${item.population}</p>
       </div>
     </div>
   `;

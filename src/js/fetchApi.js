@@ -28,9 +28,6 @@ const fetchData = async (url, viewType) => {
       console.log('404 error');
       break;
   }
-  //   const view = data.map((item) => renderCard1(item));
-
-  //   content.innerHTML = view.join('');
   renderCards(view);
 };
 
