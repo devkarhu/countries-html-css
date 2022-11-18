@@ -13,8 +13,32 @@
   </head>
   <body>
     <header>
-      <div class="header_logo">Header</div>
-      <div class="search"></div>
+      <div class="header_logo">
+        <img class="logo_app" src="./img/logo_large.png" alt="" />
+      </div>
+      <div class="header_search">
+        <div class="search_group">
+          <input
+            type="text"
+            name="text"
+            class="search_input"
+            placeholder="Your Search"
+            id="logemail"
+            autocomplete="off"
+          />
+          <button href="#" class="search_button">
+            <img class="search_icon" src="./img/find.svg" alt="" />
+          </button>
+          <div class="select_box">
+            <h1 class="select_text">Filter Regions</h1>
+            <button type="button" class="select_button">Africa</button>
+            <button type="button" class="select_button">America</button>
+            <button type="button" class="select_button">Asia</button>
+            <button type="button" class="select_button">Europe</button>
+            <button type="button" class="select_button">Oceania</button>
+          </div>
+        </div>
+      </div>
     </header>
     <section id="root" class="content">Content</section>
     <script src="./src/js/main.js" type="module"></script>

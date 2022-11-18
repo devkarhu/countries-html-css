@@ -68,4 +68,34 @@ const renderCard3 = (item) => {
   `;
 };
 
-export { renderCards, renderCard, renderCard1, renderCard2, renderCard3 };
+const renderByTypeOfCard = (data, type) => {
+  console.log(data);
+  let view = '';
+  switch (type) {
+    case '0':
+      view = data.map((item) => renderCard(item));
+      break;
+    case '1':
+      view = data.map((item) => renderCard1(item));
+      break;
+    case '2':
+      view = data.map((item) => renderCard2(item));
+      break;
+    case '3':
+      view = data.map((item) => renderCard3(item));
+      break;
+    default:
+      console.log('404 error');
+      break;
+  }
+  renderCards(view);
+};
+
+export {
+  renderCards,
+  renderCard,
+  renderByTypeOfCard,
+  renderCard1,
+  renderCard2,
+  renderCard3
+};
