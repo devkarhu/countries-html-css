@@ -102,6 +102,7 @@ header {
   border: #7bbecf;
   /* transition: all 200ms linear; */
 }
+
 .search_button {
   border-radius: 5px;
   height: 40px;
@@ -118,6 +119,7 @@ header {
   background-color: #7bbecf;
   color: #102770;
 }
+
 .search_button:hover {
   /* background-color: #102770; */
   /* color: #a7d2a3; */

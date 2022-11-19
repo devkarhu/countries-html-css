@@ -1,8 +1,8 @@
-import { fetchDataFilter } from './fetchApi.js';
+import { fetchDataSearch } from './fetchApi.js';
 import { renderCard, renderCards } from './render.js';
 
-export const setFilter = async (region) => {
-  const data = await fetchDataFilter(region);
+export const onSearch = async (value) => {
+  const data = await fetchDataSearch(value);
   if (data) {
     const cards = data.map((item) => renderCard(item));
     renderCards(cards);

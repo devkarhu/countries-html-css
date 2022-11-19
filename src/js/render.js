@@ -1,9 +1,9 @@
-const renderCards = (view) => {
+export const renderCards = (view) => {
   const content = document.getElementById('root');
   content.innerHTML = view.join('');
 };
 
-const renderCard = (item) => {
+export const renderCard = (item) => {
   return `
     <div class="card">
       <div class="card__front">
@@ -20,7 +20,7 @@ const renderCard = (item) => {
   `;
 };
 
-const renderCard1 = (item) => {
+export const renderCard1 = (item) => {
   return `
     <div class="card1">
       <h1 class="card1__text">${item.name.common}</h1>
@@ -35,7 +35,7 @@ const renderCard1 = (item) => {
   `;
 };
 
-const renderCard2 = (item) => {
+export const renderCard2 = (item) => {
   return `
     <div class="card2">
       <div class="card2__front">
@@ -55,7 +55,7 @@ const renderCard2 = (item) => {
   `;
 };
 
-const renderCard3 = (item) => {
+export const renderCard3 = (item) => {
   return `
     <div class="card3">
       <h1 class="card3__text">${item.name.common}</h1>
@@ -68,7 +68,7 @@ const renderCard3 = (item) => {
   `;
 };
 
-const renderByTypeOfCard = (data, type) => {
+export const renderByTypeOfCard = (data, type) => {
   console.log(data);
   let view = '';
   switch (type) {
@@ -89,13 +89,4 @@ const renderByTypeOfCard = (data, type) => {
       break;
   }
   renderCards(view);
-};
-
-export {
-  renderCards,
-  renderCard,
-  renderByTypeOfCard,
-  renderCard1,
-  renderCard2,
-  renderCard3
 };
