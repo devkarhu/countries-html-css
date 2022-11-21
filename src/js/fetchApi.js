@@ -5,9 +5,8 @@ export const fetchData = async () => {
 
   if (data.status === 404) {
     return false;
-  } else {
-    return data;
   }
+  return data;
 };
 
 export const fetchDataFilter = async (region) => {
@@ -18,9 +17,8 @@ export const fetchDataFilter = async (region) => {
 
   if (data.status === 404) {
     return false;
-  } else {
-    return data;
   }
+  return data;
 };
 
 export const fetchDataSearch = async (name) => {
@@ -30,7 +28,17 @@ export const fetchDataSearch = async (name) => {
 
   if (data.status === 404) {
     return false;
-  } else {
-    return data;
   }
+  return data;
+};
+
+export const fetchDataDetail = async (name) => {
+  const url = `https://restcountries.com/v3.1/name/${name}`;
+  const res = await fetch(url);
+  const data = await res.json();
+
+  if (data.status === 404) {
+    return false;
+  }
+  return data;
 };

@@ -2,19 +2,21 @@ import { fetchData } from './fetchApi.js';
 import { setFilter } from './filter.js';
 import { renderByTypeOfCard } from './render.js';
 import { onSearch } from './search.js';
+import { listenCardsGrid } from './detail.js';
 
 // window.addEventListener('load', () => fetchData(url, '0'));
 window.addEventListener('load', async () => {
   const data = await fetchData();
   if (data) {
     renderByTypeOfCard(data, '0');
+    listenCardsGrid();
   } else {
     alert('Something is wrong.');
   }
 });
 
 const buttonsFilters = document.querySelectorAll('.select_button');
-
+// console.log('buttonsFilters: ', buttonsFilters);
 buttonsFilters.forEach((item) => {
   item.addEventListener('click', (e) => {
     // console.log(e.target.textContent);

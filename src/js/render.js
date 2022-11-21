@@ -3,6 +3,11 @@ export const renderCards = (view) => {
   content.innerHTML = view.join('');
 };
 
+export const renderDetailSection = (view) => {
+  const content = document.getElementById('root');
+  content.innerHTML = view;
+};
+
 export const renderCard = (item) => {
   return `
     <div class="card">
@@ -69,7 +74,7 @@ export const renderCard3 = (item) => {
 };
 
 export const renderByTypeOfCard = (data, type) => {
-  console.log(data);
+  // console.log(data);
   let view = '';
   switch (type) {
     case '0':
@@ -88,5 +93,45 @@ export const renderByTypeOfCard = (data, type) => {
       console.log('404 error');
       break;
   }
+  // console.log('view: ', view);
   renderCards(view);
+};
+
+export const renderDetail = (country) => {
+  return `
+    <section class="detail_container">
+      <h1 class="detail_text">COUNTRY DETAILS</h1>
+      <div class="details">
+        <div class="box">
+          <img src="${country.flags.png}" alt="" class="detail_img_flag" />
+          <div class="box_text">
+            <p class="box_text_subtitle_1">Name: ${country.altSpellings[1]}</p>
+            <p class="box_text_subtitle_2">Capital: ${country.capital[0]}</p>
+          </div>
+        </div>
+
+        <span class="separator"></span>
+
+        <div class="box">
+          <img src="${country.coatOfArms.png}" alt="" class="detail_img_coat" />
+          <div class="box_text">
+            <p class="box_text_subtitle_1">Languages: ${Object.values(
+              country.languages
+            )}</p>
+            <p class="box_text_subtitle_2">Borders: ${country.borders}</p>
+          </div>
+        </div>
+
+        <span class="separator"></span>
+
+        <div class="box">
+          <div class="box_text">
+            <p class="box_text_subtitle_1">Region: ${country.region}</p>
+            <p class="box_text_subtitle_2">Population: ${country.population}</p>
+            <p class="box_text_subtitle_3">Time Zone: ${country.timezones}</p>
+        </div>
+        </div>
+      </div>
+    </section>
+  `;
 };
