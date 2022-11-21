@@ -11,26 +11,29 @@
     <link rel="stylesheet" href="css/card2.css" />
     <link rel="stylesheet" href="css/card3.css" />
     <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="/img/logo_small.png" />
   </head>
   <body>
     <header>
       <div class="header_logo">
-        <img class="logo_app" src="./img/logo_large.png" alt="" />
+        <img id="logo" class="logo_app" src="./img/logo_large.png" alt="" />
       </div>
       <div class="header_search">
         <div class="search_group">
-          <input
-            id="searchInput"
-            type="text"
-            name="text"
-            class="search_input"
-            placeholder="Your Search"
-            id="logemail"
-            autocomplete="off"
-          />
-          <button id="searchButton" href="#" class="search_button">
-            <img class="search_icon" src="./img/find.svg" alt="" />
-          </button>
+          <div class="search_input_group">
+            <input
+              id="searchInput"
+              type="text"
+              name="text"
+              class="search_input"
+              placeholder="Your Search"
+              id="logemail"
+              autocomplete="off"
+            />
+            <button id="searchButton" href="#" class="search_button">
+              <img class="search_icon" src="./img/find.svg" alt="" />
+            </button>
+          </div>
           <div class="select_box">
             <h1 class="select_text">Filter Regions</h1>
             <button type="button" class="select_button">Africa</button>

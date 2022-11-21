@@ -1,10 +1,11 @@
+import { setRoute } from '../router/routes.js';
 import { fetchDataDetail } from './fetchApi.js';
 import { renderDetail, renderDetailSection } from './render.js';
 
 export const showDetail = async (name) => {
+  setRoute(`details_${name}`);
   const data = await fetchDataDetail(name);
   if (data) {
-    console.log('data: ', data[0]);
     const details = renderDetail(data[0]);
     renderDetailSection(details);
   } else {

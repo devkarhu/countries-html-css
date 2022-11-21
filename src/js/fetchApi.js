@@ -10,7 +10,6 @@ export const fetchData = async () => {
 };
 
 export const fetchDataFilter = async (region) => {
-  // console.log('region: ', region);
   const url = `https://restcountries.com/v3.1/region/${region}`;
   const res = await fetch(url);
   const data = await res.json();

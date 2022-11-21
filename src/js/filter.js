@@ -1,8 +1,10 @@
 import { fetchDataFilter } from './fetchApi.js';
 import { renderCard, renderCards } from './render.js';
 import { listenCardsGrid } from './detail.js';
+import { setRoute } from '../router/routes.js';
 
 export const setFilter = async (region) => {
+  setRoute(`filter_${region}`);
   const data = await fetchDataFilter(region);
   if (data) {
     const cards = data.map((item) => renderCard(item));

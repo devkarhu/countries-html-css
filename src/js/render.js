@@ -74,7 +74,6 @@ export const renderCard3 = (item) => {
 };
 
 export const renderByTypeOfCard = (data, type) => {
-  // console.log(data);
   let view = '';
   switch (type) {
     case '0':
@@ -93,7 +92,6 @@ export const renderByTypeOfCard = (data, type) => {
       console.log('404 error');
       break;
   }
-  // console.log('view: ', view);
   renderCards(view);
 };
 
